@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    {{ product.des|truncatewords:150}}
+{% endblock %}
+
+{% block title %}
+    {% if category %}
+        {{ product.name}} - Pet company
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+        <div>
+            <div>
+                <p><a href="{% url 'shop:allProdCat' %}" >Home</a>|<a href="{{product.category.get_url}}" >{{product.category}}</a>|{{product.name}}</p>
+            </div>
+        </div>
+        <br>
+        <div>
+            <div>
+                <div>
+                    <img src="{{product.img.url}}" alt="{{product.name}}" width="700px;" height="600px;">
+                </div>
+            </div>
+            <div>
+                <div>
+                     <h1>{{product.name}}</h1>
+                    <p>{{product.price}}</p>
+                    <p>Product Description</p>
+                    <p>{{product.des}}</p>
+                    {% if product.stock <= 0 %}
+                        <p><b>Out Of Stock!</b></p>
+                    {% else %}
+                        <a href="">Add To Cart</a>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+
+{% endblock %}

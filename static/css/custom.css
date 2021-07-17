@@ -1,0 +1,60 @@
+body{
+    font-family: 'STIX Two Math', serif;
+}
+
+.nav-item {
+    letter-spacing : .2em;
+    font-size :14px;
+    text-transform :uppercase;
+}
+
+.dropdown-item{
+    letter-spacing : .2em;
+    font-size :14px;
+    text-transform :uppercase;
+}
+
+.my_footer p{
+    padding-top:20px;
+    font-size:14px;
+}
+
+.my_footer{
+    background-color: black;
+    color: white;
+    height:60px;
+}
+
+.my_row_class{
+    padding-top :15px;
+}
+
+.my_row_class .mx_auto{
+    color:#000;
+    font-size:12px;
+}
+
+.my_image{
+    width:100%;
+    height:350px;
+}
+
+.my_title{
+    font-size=16px;
+    text_transform:uppercase;
+    letter-spacing:.1em;
+}
+
+.my_image_padding{
+    padding:5px;
+}
+
+.my_btm_margin{
+    margin-bottom:10px;
+}
+
+.card-body h4{
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+}

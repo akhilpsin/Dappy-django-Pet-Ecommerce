@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    {% if category %}
+        {{ category.des|truncatewords:150}}
+    {% else  %}
+        Welcome to Pet company , a shoping place for friendly paws (please go through our categories)...
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+    {% if category %}
+        {{ category.name}} - Pet company
+    {% else  %}
+         category - Pet company
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if category %}
+        <div>
+            <div class="row my_row_class">
+                <div class="mx-auto">
+                <p><a href="{% url 'shop:allProdCat' %}" >Collection Of Products</a> </p>
+                 </div>
+            </div>
+        </div>
+    {% endif %}
+<div class="mx_auto">
+    {% if category %}
+        <div>
+            <img class="my_image my_image_padding" src="{{category.img.url}}" alt="{{category.name}}">
+        </div>
+        <br>
+        <div>
+            <h1 class="text_center my_title">{{category.name}}</h1>
+            <p class="text-justify">{{category.des}}</p>
+        </div>
+    {% else %}
+        <div>
+            <img class="my_image my_image_padding" src="{% static 'img/banner.png' %}" alt="pet company" >
+        </div>
+        <div>
+            <h1 class="text_center my_title">Our Products </h1>
+            <p class="text-justify">The Dappy pet store will be the best online platform for the pet lovers as it will be offering unique and premium quality pet food and supplies along with superb quality at reasonable prices. </p>
+        </div>
+    {% endif %}
+</div>
+
+<div class="container">
+    <div class="row mx_auto">
+        {% for product in products %}
+        <div class="my_btm_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4">
+            <div class="card text-center" style="min-width:18rem;">
+                <a href="{{product.get_url}}"><img class ="card-img-top my_image" src="{{product.img.url}}" alt="{{product.name}}" width="300px;" height="400px;"></a>
+                <div class="card-body">
+                <h4>{{product.name}}</h4>
+                <p>{{product.price}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
