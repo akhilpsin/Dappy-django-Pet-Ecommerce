@@ -58,3 +58,27 @@ body{
     text-transform:uppercase;
     letter-spacing:.2em;
 }
+
+.my_product_row_class{
+    padding-top:15px;
+    padding-bottom:20px;
+}
+
+.my_product_row_class.mx_auto{
+    color:#000;
+    font-size:12px;
+    text-decoration:none;
+}
+
+.my_product_title{
+    font-size:16px;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    padding-top:15px;
+    padding-bottom:10px;
+    font-weight: bold;
+}
+
+.my_pro_text{
+    padding-right:20px;
+}

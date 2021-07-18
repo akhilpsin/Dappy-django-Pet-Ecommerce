@@ -11,32 +11,36 @@
 {% endblock %}
 
 {% block content %}
-        <div>
-            <div>
+        <div class="row my_product_row_class">
+            <div class="mx_auto">
                 <p><a href="{% url 'shop:allProdCat' %}" >Home</a>|<a href="{{product.category.get_url}}" >{{product.category}}</a>|{{product.name}}</p>
             </div>
         </div>
+    <div class="container">
         <br>
-        <div>
-            <div>
-                <div>
-                    <img src="{{product.img.url}}" alt="{{product.name}}" width="700px;" height="600px;">
-                </div>
-            </div>
-            <div>
-                <div>
-                     <h1>{{product.name}}</h1>
-                    <p>{{product.price}}</p>
-                    <p>Product Description</p>
-                    <p>{{product.des}}</p>
-                    {% if product.stock <= 0 %}
-                        <p><b>Out Of Stock!</b></p>
-                    {% else %}
-                        <a href="">Add To Cart</a>
-                    {% endif %}
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+                <div style="min-width:18rem">
+                    <img src="{{product.img.url}}" alt="{{product.name}}" width="500px;" height="400px;">
                 </div>
             </div>
 
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 ">
+                    <div>
+                     <h1 class="my_product_title">{{product.name}}</h1>
+                    <p>Rs {{product.price}}</p>
+                    <p class="my_title">Product Description</p>
+                    <p class="text-justify my_pro_text">{{product.des}}</p>
+                    {% if product.stock <= 0 %}
+                        <p class="text-justify my_pro_text"><b>Out Of Stock!</b></p>
+                    {% else %}
+                        <a class="btn btn-secondary" href="">Add To Cart</a>
+                    {% endif %}
+                    </div>
+
+                </div>
         </div>
+    </div>
+    <br>
 
 {% endblock %}
