@@ -31,3 +31,4 @@ def proDetails(request,c_slug,product_slug):
         raise e
 
     return render(request,'product.html',{'product':product})
+
