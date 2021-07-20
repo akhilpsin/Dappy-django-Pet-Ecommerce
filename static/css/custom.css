@@ -87,3 +87,17 @@ body{
 .my-search-text{
     padding-top:20px;
 }
+
+/*** Cart Page ***/
+
+.my_custom_table{
+    min-width:400px;
+    font-size:14px;
+}
+
+.my_custom_thead{
+    text-transform:uppercase;
+    font-weight:normal;
+    letter-spacing:.2em;
+    background-color:#f8f8fa!important;
+}

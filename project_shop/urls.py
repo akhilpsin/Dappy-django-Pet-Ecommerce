@@ -22,8 +22,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('app',include("app.urls")),
-    path('search_app',include("search_app.urls")),
+     path('app/',include("app.urls")),
+    path('search_app/',include("search_app.urls")),
+    path('cart/',include("cart.urls")),
 ]
 
 if settings.DEBUG:
