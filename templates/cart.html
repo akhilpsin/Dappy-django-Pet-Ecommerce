@@ -45,7 +45,7 @@
                 {% for cart_item in cart_items %}
                 <tr>
                     <td>
-                        <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.img.url}}" alt=" " width="200" height="200" class="float-left rounded custom_image" ></a>
+                        <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.img.url}}" alt=" " width="100" height="100" class="float-left rounded custom_image" ></a>
                     </td>
                     <td class="text-lef">
                         {{ cart_item.product.name }}
@@ -63,12 +63,12 @@
                     <td>
                         <a href="{% url 'cart:add_cart' cart_item.product.id %}" class="custom_a"><i class="far fa-plus-square custom_icon"></i></a>
                         &nbsp; <a href="{% url 'cart:cart_remove' cart_item.product.id %}" class="custom_a"><i class="far fa-minus-square custom_icon"></i></a>
-                        &nbsp; <a href="" class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
+                        &nbsp; <a href="{% url 'cart:full_remove' cart_item.product.id %}" class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
                     </td>
                     {% else %}
                     <td>
                         &nbsp; <a href="{% url 'cart:cart_remove' cart_item.product.id %}" class="custom_a"><i class="far fa-minus-square custom_icon"></i></a>
-                        &nbsp; <a href="" class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
+                        &nbsp; <a href="{% url 'cart:full_remove' cart_item.product.id %}" class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
                     </td>
                     {% endif %}
                 </tr>
@@ -92,6 +92,9 @@
                     <td>
                         Please review your cart items before proceeding with the order payment.
                     </td>
+                </tr>
+                <tr>
+                    <td class="text-left"> Your Total is : Rs <Strong>{{ total }}</Strong></td>
                 </tr>
                 </tbody>
             </table>
