@@ -23,14 +23,12 @@
               {% endfor %}
           </ul>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link left" href="#"><i class="fas fa-shopping-cart"></i></a>
-        </li>
-
-
+        {% if item_count > 0 %}
+          <li class="nav-item">
+            <a class="nav-link left" href="{% url 'cart:cart_detail'%}"><i class="fas fa-shopping-cart"></i>( {{item_count}} )</a>
+          </li>
+        {% endif %}
       </ul>
-
     </div>
     <form class="d-flex" action="{% url 'search_app:search_result' %}" method="get">
         {% csrf_token %}
