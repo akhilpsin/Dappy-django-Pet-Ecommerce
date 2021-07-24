@@ -5,5 +5,5 @@
 
 
 ### Screen shot
-![Webapplication Screenshot](https://github.com/akhilpsin/Dappyy/screen_shot.PNG?raw=true)
+![Webapplication Screenshot](https://github.com/akhilpsin/Dappyy/blob/master/screen_shot.PNG?raw=true)
 ---------------------------------------------------------------------------------------------------------------------------------------------------
