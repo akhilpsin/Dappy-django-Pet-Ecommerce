@@ -25,14 +25,10 @@ git clone https://github.com/akhilpsin/Dappyy.git
 cd Dappyy
 ```
  
-# Example command to start the application  
+# =command to start the application
+```bash  
 python manage.py runserver  
-
-## Contributing
+```
+## Other details
 Contributions are welcome! please follow a basic code of conduct and the process for submitting pull requests.
-
-## Author
-Akhil PS - Initial work - akhilpsin
-For any further queries, you can reach out to Akhil PS at akhilpsinbox@gmail.com.
-
-Project Status: Completed open to any sugessions.
+For any further queries, you can reach out to me Akhil PS at akhilpsinbox@gmail.com.
