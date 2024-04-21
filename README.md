@@ -25,7 +25,7 @@ git clone https://github.com/akhilpsin/Dappyy.git
 cd Dappyy
 ```
  
-# =command to start the application
+# To start the application
 ```bash  
 python manage.py runserver  
 ```
